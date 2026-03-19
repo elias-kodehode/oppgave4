@@ -25,14 +25,39 @@
                 <div class="ordering-container">
                     <h2>Workshops i nærheten</h2>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d476632.8917587868!2d5.531032012206915!3d62.182964541840484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBurger%20King!5e0!3m2!1sen!2sno!4v1773916485644!5m2!1sen!2sno"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <select id="valg">
-                        <option>Ålesund</option>
-                        <option>Ulstein</option>
-                        <option>Volda</option>
-                        <option>Ørsta</option>
-                    </select>
-                </div>
+                    <form>
+                        <select id="valg-omeråde">
+                            <option value="ålesund">Ålesund</option>
+                            <option value="Ulstein">Ulstein</option>
+                            <option value="Volda">Volda</option>
+                            <option value="Ørsta">Ørsta</option>
+                        </select>
 
+                        <select id="valg-workshop">
+                            <option value="mosaikk">Mosaikk</option>
+                            <option value="Akvarellmaling">Akvarellmaling</option>
+                            <option value="Lerretsmaling">Lerretsmaling</option>
+                        </select>
+
+                        <div class="user-info">
+                            <div class="user-info-input">
+                                <label for="navn">Navn:</label>
+                                <input id="navn" type="text" placeholder="Navn">
+                            </div>
+                            <div class="user-info-input">
+                                <label for="navn">E-Mail:</label>
+                                <input id="email" type="email" placeholder="E-Mail" autocomplete="email">
+                            </div>
+                            <div class="user-info-input">
+                                <label for="navn">Mobil:</label>              
+                                <input id="mobil" type="text" placeholder="Mobil">
+                            </div>
+                        </div>
+
+
+                        <button type="submit">Bestill</button>
+                    </form>
+                </div>
             </section>
         </main>
         
