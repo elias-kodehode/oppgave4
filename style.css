@@ -1,81 +1,149 @@
 :root{
     --primary-color:#E07A5F;
-    --secondar-color: #F2CC8F;
+    --secondary-color: #F2CC8F;
     --accent-color:#3D405B;
     --highlight-color: #F4A261;
     --bg-color:#FFF8F0;
     --text-color:#3A2E2A;
+    overflow-x: hidden;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    /* max-height: 100vh; */
     max-width: 100vw;
 }
 
-section{
-    padding: 10px;
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: var(--bg-color);
-    /* margin: 10px; */
-}
-
-.container header{
-    text-align: center;
-    /* margin-bottom: 20px; */
-    padding: 10px;
-    background-color: var(--highlight-color);
-}
 
 
 main{
     display: flex;
     flex:1;
     background-color: var(--highlight-color);
-}
-section#hero{
-    flex:1;
-    display: flex;
     flex-direction: column;
 }
 
-section#hero p {
-    text-overflow: clip;
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
 }
 
 
-.services{
+/* HEADER */
+#header{
+    text-align: center;
+    /* margin-bottom: 20px; */
+    padding: 10px;
+    background-color: var(--highlight-color);
+}
+
+/* HERO */
+
+
+section#hero{
+    flex:1;
+    display: flex;
+    border-radius: 6px;
+    flex-direction: column;
+}
+/* Give every closest child element margin */
+section#hero > *, section#ordering > * {
+    margin: 10px;
+}
+
+    /*  BANNER */
+.banner{
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    /* margin: 10px; */
+}
+.banner-img{
+    width: 100%;
+}
+
+    /*ANIMATED TEXT  */
+    
+
+.text-slide{
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+ .text-slide p{
+    overflow: hidden;
+}
+
+
+    /* Information */
+.information{
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: space-around;
     align-items: center;
-    height: auto;
+    /* height: auto; */
     margin-bottom: 20px;
 }
-.service-card{
-    background-color: var(--secondar-color);
+
+.info-card{
+    background-color: var(--secondary-color);
     padding: 10px;
     text-align: center;
     /* max-width: 300px; */
-    height: auto;
+    /* height: auto; */
     border-radius: 6px;
 }
-
-
-.banner{
+.info-card img{
     width: 100%;
 }
 
-.service-card img{
-    width: 100%;
+
+/* END HERO */
+
+
+
+
+/* BESTILLING */
+
+section#ordering{
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex:1;
+    flex-direction: column;
 }
+
+#ordering .ordering-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#ordering select{
+    /* height: 10px; */
+}
+#ordering iframe{
+    /* height: inherit; */
+    border-radius: 6px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+
+
+
+
 
 button{
     border: 0;
@@ -83,9 +151,50 @@ button{
     padding: 20px;
 }
 
+button:hover{
+    border-radius: 10px;
+}
+
+
+.text-animation{
+    animation-duration: 1s;
+    animation-name: slide-in;
+    animation-fill-mode: forwards;
+}
+
+.text-animation-out{
+    animation-duration: 1s;
+    animation-name: slide-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slide-in {
+    from{
+        transform: translateX(150vw);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-150vw);
+        opacity: 0;
+    }
+}
+
+
 
 @media (min-width:600px) {
-    .services{
+    .information{
         flex-direction: row;
     }
 }
