@@ -5,14 +5,51 @@
     --highlight-color: #F4A261;
     --bg-color:#FFF8F0;
     --text-color:#3A2E2A;
-    overflow-x: hidden;
+    --level1:8px;
+    --level2:16px;
+    --level3:32px;
+    /* overflow-x: hidden; */
 }
+
+html, body{
+    height: auto;
+    min-height: 100%;
+}
+
+.bg-primary{ background-color: var(--primary-color); }
+.bg-secondary{ background-color: var(--secondary-color); }
+.bg-accent{ background-color: var(--accent-color); }
+.bg-highlight{ background-color: var(--highlight-color); }
+.bg-text-color{ background-color: var(--text-color); }
+
+.m-0,.mg-0,.margin-0{ margin:0; }
+.m-1,.mg-1,.margin-1{ margin: var(--level1); }
+.m-2,.mg-2,.margin-2{ margin: var(--level2); }
+.m-3,.mg-3,.margin-3{ margin: var(--level3); }
+
+.p-0,.pd-0,.padding-0{ padding: 0; }
+.p-1,.pd-1,.padding-1{ padding: var(--level1); }
+.p-2,.pd-2,.padding-2{ padding: var(--level2); }
+.p-3,.pd-3,.padding-3{ padding: var(--level3); }
+
+.row{ display: flex; flex-direction: row; }
+.column, .col{  display: flex;  flex-direction: column; }
+
+.flex-1{ flex: 1;}
+.flex-2{ flex: 2;}
+.flex-3{ flex: 3;}
+
+.h-100{ height: 100%;}
+.h-50{height: 50%;}
+.w-100{width: 100%;}
+.w-50{width: 50%;}
+.viewport-h{ height: 100vh; }
+.viewport-w { width: 100vw; }
 
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
-    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 
@@ -26,19 +63,10 @@ main{
 
 
 
-.container{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 100vh;
-}
-
 
 /* HEADER */
 #header{
     text-align: center;
-    /* margin-bottom: 20px; */
-    padding: 10px;
     background-color: var(--highlight-color);
 }
 
@@ -48,33 +76,28 @@ main{
 section#hero{
     flex:1;
     display: flex;
-    border-radius: 6px;
     flex-direction: column;
 }
-/* Give every closest child element margin */
-section#hero > *, section#ordering > * {
-    margin: 10px;
-}
-
     /*  BANNER */
 .banner{
     background-color: var(--secondary-color);
-    border-radius: 6px;
-    padding: 10px;
+    border-radius: var(--level2);
+    /* padding: var(--level2); */
     text-align: center;
-    /* margin: 10px; */
-}
-.banner-img{
-    width: 100%;
 }
 
     /*ANIMATED TEXT  */
     
+.banner img{
+    /* width: 100%; */
+    object-fit:cover;
+    height: 200px;
+}
 
 .text-slide{
     background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 6px;
+    /* padding: var(--level2); */
+    border-radius: var(--level2);
     text-align: center;
 }
 
@@ -87,9 +110,9 @@ section#hero > *, section#ordering > * {
 .information{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--level2);
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
     /* height: auto; */
     margin-bottom: 20px;
 }
@@ -130,9 +153,6 @@ section#ordering{
     padding: 10px;
 }
 
-#ordering select{
-    /* height: 10px; */
-}
 #ordering iframe{
     /* height: inherit; */
     border-radius: 6px;
@@ -142,40 +162,46 @@ section#ordering{
 
 
 
-/* input {
-    display: block;
-    margin: 20px;
-    width: 50%;
-    left: 25%;
-    position: relative;
-} */
+.order-info{
+    justify-content: space-around;
+}
 
 
 .user-info{
-    display: flex;
-    flex-direction: column;
     align-items:center;
+    flex: 2;
 }
+
+
 
 .user-info-input{
-    width: 50%;
+    width: 100%;
+    flex: 1;
+    /* width: auto ; */
     display: flex;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     flex-direction: column;
+    /* margin: 6px; */
+    text-align: left;
+    /* line-height: 2rem; */
+    border-radius: 20px;
 }
 
+
+textarea{ resize: none;}
 
 
 button#bestill-btn {
     border: 0;
     border-radius: 6px;
-    padding: 20px;
 }
 
-button#bestill-btn :hover{
+button#bestill-btn:hover{
     border-radius: 10px;
 }
 
+
+/* Animations */
 
 .text-animation{
     animation-duration: 1s;
@@ -188,6 +214,7 @@ button#bestill-btn :hover{
     animation-name: slide-out;
     animation-fill-mode: forwards;
 }
+
 
 
 @keyframes slide-in {
@@ -214,8 +241,16 @@ button#bestill-btn :hover{
 
 
 
-@media (min-width:600px) {
+@media (min-width:800px) {
     .information{
         flex-direction: row;
     }
+
+
+
+    body{
+        background-color: var(--highlight-color);
+        margin: 0 200px;
+    }
+
 }

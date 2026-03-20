@@ -7,7 +7,7 @@ const benefitsText = [
     "Slapp av og lad opp batteriene"
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("", () => {
 
     const textHolder = document.getElementById("text-slide");
     const p = textHolder.querySelector("p");
