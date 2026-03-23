@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestilling</title>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="column">
+    <header id="header" >
+        <h1>CRAFTSVILLA</h1>
+        <nav id="nav-bar">
+
+        </nav>
+    </header>
+
+    <main>
+        <section id="feedback" class="p1 m1">
+            <h2>Vi vil gjerne høre fra deg!</h2>
+            <h3>Tilbakemeldingene dine hjelper oss med å gjøre workshopene våre bedre for alle. Del gjerne opplevelsen din med oss!</h3>
+
+            <form id="feedback-form" class="col">
+
+                <div class="column">
+                    <label>Lokale</label>
+                    <select id="valg-omeråde">
+                        <option value="ålesund">Ålesund</option>
+                        <option value="Ulstein">Ulstein</option>
+                        <option value="Volda">Volda</option>
+                        <option value="Ørsta">Ørsta</option>
+                    </select>
+                </div>
+
+
+                <div class="column">
+                    <label>Workshop</label>
+                    <select id="valg-workshop">
+                        <option value="mosaikk">Mosaikk</option>
+                        <option value="Akvarellmaling">Akvarellmaling</option>
+                        <option value="Lerretsmaling">Lerretsmaling</option>
+                        <option value="Lerretsmaling">Annet/Flere</option>
+                    </select>
+                </div>
+
+
+                <div class="column">
+                    <label for="navn">Navn:</label>
+                    <input id="navn" type="text" placeholder="Navn">
+                </div>
+
+                <div class="column">
+                    <label for="navn">E-Mail:</label>
+                    <input id="email" type="email" placeholder="E-Mail" autocomplete="email">
+                </div>
+
+                <div class="column">
+                    <label for="ønsker">Hva likte du best?</label>
+                    <textarea name="ønsker" id="ønsker" rows="5"></textarea>
+                </div>
+
+
+                <div class="column">
+                    <label for="ønsker">Hvordan kan vi forbedre opplevelsen din?</label>
+                    <textarea name="ønsker" id="ønsker" rows="5"></textarea>
+                </div>
+
+                <div class="column">
+                    <label>Vil du anbefale CRAFTSVILLA til andre?</label>
+                    <select name="" id="">
+                        <option>Ja</option>
+                        <option>Nei</option>
+                        <option>Kanskje</option>
+                    </select>
+                </div>
+
+                <div class="column ">
+                    <label>Jeg gir CRAFTSVILLA tillatelse til å dele tilbakemeldingene mine på nettstedet deres eller sosiale medier.</label>
+                    <input type="checkbox" name="" id="" value="">
+                </div>
+
+                <div class="column">
+                    <label for="">Last Opp bilde</label>
+                    <input type="file" name="" id="">
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    
+
+    <footer>
+        <div class="contact">
+            <div class="col m3">
+                <address>
+                    Gateveien 64<br>
+                    6065 Ulsteinvik<br>
+                    +47 12 34 56 78
+                </address>
+            </div>
+        </div>
+
+        <div class="icon-row">
+            <a href="#">
+                <img src="./images/icons/mail.png" alt="Email">
+            </a>
+            <a href="#">
+                <img src="./images/icons/facebook.png" alt="facebook">
+            </a>
+            <a href="#">
+                <img src="./images/icons/twitter.png" alt="twitter">
+            </a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

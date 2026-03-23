@@ -1,5 +1,36 @@
 const app = {};
 
+
+
+let pages = [
+    {
+        "name": "Hjem",
+        "path":"index.html"
+    },
+    {
+        "name": "Bestilling",
+        "path":"ordering.html"
+    },
+    {
+        "name": "Galleri",
+        "path":"gallery.html"
+    },
+    {
+        "name": "Tilbakemelding",
+        "path":"feedback.html"
+    }
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navBar = document.getElementById("nav-bar");
+    for (let i = 0; i < pages.length; i++) {
+        let element = document.createElement("a");
+        element.innerHTML = capitalizeFirstLetter(pages[i].name);
+        element.setAttribute("href", pages[i].path);
+        navBar.appendChild(element);
+    }
+});
+
 const benefitsText = [
     "Ingen tidligere erfaring nødvendig",
     "Alt materiale inkludert",
@@ -37,3 +68,9 @@ document.addEventListener("", () => {
     // }, 3000);
 });
 
+function capitalizeFirstLetter(str) {
+    if (!str) {
+      return ""; // Handles empty strings safely
+    }
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
