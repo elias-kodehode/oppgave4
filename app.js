@@ -1,9 +1,39 @@
 const app = {};
 
+const galleri = {
+    imageHolder: null,
+    modal: null,
+    title: null,
+    description:null,
+    img: null,
+    setup(){
+        this.imageHolder = document.getElementById("image-holder");
+        this.modal = document.getElementById("image-popout");
+        this.modal.style.display = "none";
+        this.title = this.modal.querySelector("h3");
+        this.description = this.modal.querySelector("p");
+        this.img = this.modal.querySelector("img");
+    },
+    openImage(img){
+        console.log(img);
+        this.modal.style.display = "flex";
+        const info = img.previousElementSibling;
+        this.title.innerHTML = info.querySelector("h3").innerHTML;
+        this.description.innerHTML = info.querySelector("p").innerHTML;
+        this.img.setAttribute("src", img.getAttribute("src"));
+    },
+    closeModal(obj){
+        this.modal.style.display = "none";
+        this.title.innerHTML = "";
+        this.description.innerHTML = "";
+        this.img.setAttribute("src", null);
+    }
+};
 
 
-let pages = [
-    {
+const navBar = {
+    container: null,
+    pages: [{
         "name": "Hjem",
         "path":"index.html"
     },
@@ -18,17 +48,21 @@ let pages = [
     {
         "name": "Tilbakemelding",
         "path":"feedback.html"
+    }],
+    setup(){
+        this.container = document.getElementById("nav-bar");
+        for (let i = 0; i < this.pages.length; i++) {
+            let element = document.createElement("a");
+            element.innerHTML = capitalizeFirstLetter(this.pages[i].name);
+            element.setAttribute("href", this.pages[i].path);
+            this.container.appendChild(element);
+        }
     }
-];
+};
 
 document.addEventListener("DOMContentLoaded", () => {
-    const navBar = document.getElementById("nav-bar");
-    for (let i = 0; i < pages.length; i++) {
-        let element = document.createElement("a");
-        element.innerHTML = capitalizeFirstLetter(pages[i].name);
-        element.setAttribute("href", pages[i].path);
-        navBar.appendChild(element);
-    }
+    navBar.setup();
+
 });
 
 const benefitsText = [
@@ -73,4 +107,4 @@ function capitalizeFirstLetter(str) {
       return ""; // Handles empty strings safely
     }
     return str.charAt(0).toUpperCase() + str.slice(1);
-  }
+}

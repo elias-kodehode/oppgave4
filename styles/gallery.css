@@ -1,0 +1,41 @@
+.image-popout{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+    /* background: orange; */
+    backdrop-filter: blur(20px);
+    width: 100vw;
+    height: auto;
+    overflow-y: scroll;
+
+}
+
+
+.header-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+}
+
+
+p.beskrivelse{
+    /* border: 1px solid black; */
+    padding: 5px;
+    background-color: var(--accent-color);
+
+}
+.header-row button{
+    width: 2rem;
+    height: 2rem;
+}
+.header-row h3{
+    text-align: center;
+    flex-grow: 1;
+}
+.image-popout img{
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
