@@ -1,41 +1,73 @@
-.image-popout{
+.gallery-modal{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    z-index: 1000;
-    /* background: orange; */
-    backdrop-filter: blur(20px);
-    width: 100vw;
-    height: auto;
-    overflow-y: scroll;
-
+    position: fixed;
+    z-index: 100000;
+    backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100vh;
 }
 
-
-.header-row{
+.modal-header{
     display: flex;
     flex-direction: row;
+    padding: 5px;
+}
+
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
     width: 100%;
-    padding: 5px;
 }
 
 
-p.beskrivelse{
-    /* border: 1px solid black; */
-    padding: 5px;
-    background-color: var(--accent-color);
-
-}
-.header-row button{
+.modal-header button{
     width: 2rem;
     height: 2rem;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    color:white;
+    font-size: 2rem;
+    font-family: 'Courier New';
 }
-.header-row h3{
+
+.modal-header h3{
     text-align: center;
     flex-grow: 1;
 }
-.image-popout img{
-    width: auto;
-    height: auto;
-    padding: 20px;
+
+.modal-body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.gallery-modal img{
+    width: 100%;
+    object-fit: contain;
+    height: 300px;
+    
+}
+
+.gallery-modal p{
+    flex-grow: 1;
+    /* text-align: center; */
+    text-overflow: ellipsis;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    padding: 5px;
+}
+
+@media (min-width:800px) {
+    .gallery-modal p{
+        width: 50%;
+    }
 }

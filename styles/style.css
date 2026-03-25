@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root{
     --primary-color:#E07A5F;
-    /* --secondary-color: #F2CC8F; */
     --secondary-color: #6D597A;
     --accent-color:#3D405B;
     --highlight-color:#2C2F4A;
-    /* --highlight-color: #F4A261; */
     --bg-color:#FFF8F0;
     --text-color:#3A2E2A;
     --level1:8px;
     --level2:16px;
     --level3:32px;
-    /* overflow-x: hidden; */
     color: rgb(244, 214, 214);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* html, body{
@@ -40,10 +42,11 @@
 .row, .flex-row{ display: flex; flex-direction: row; }
 .column, .col, .flex-col, .flex-column{  display: flex;  flex-direction: column; }
 
-.border{
-    border: 1px solid black;
-}
-
+.border{  border: 1px solid black;}
+.rounded-border-0{ border-radius: 0;}
+.rounded-border-1{ border-radius: var(--level1);}
+.rounded-border-2{ border-radius: var(--level2);}
+.rounded-border-3{ border-radius: var(--level3);}
 .h-100{ height: 100%;}
 .h-50{height: 50%;}
 .w-100{width: 100%;}
@@ -58,6 +61,9 @@
 }
 
 
+li {
+    list-style-position: inside;
+}
 
 main{
     display: flex;
@@ -66,17 +72,26 @@ main{
     flex-direction: column;
 }
 
-
-
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
 /* HEADER */
 #header{
     text-align: center;
     background-color: var(--accent-color);
     color: white;
+    padding: var(--level1);
 }
 #header h1{
-    margin: 20px;
+    margin:0 20px;
 }
 
 
@@ -84,7 +99,6 @@ main{
     display: flex;
     justify-content: space-evenly;
     padding: var(--level1);
-    margin: var(--level2);
 }
 
 
@@ -106,6 +120,8 @@ section#hero > *{
     margin: var(--level2);
 
 }
+
+
     /*  BANNER */
 .banner{
     background-color: var(--secondary-color);
@@ -173,6 +189,8 @@ section#hero .banner{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: inherit;
+    color:beige;
+    font-weight: 800;
 }
 
 .info-card button:hover{
@@ -183,6 +201,7 @@ section#hero .banner{
     width: 100%;
     padding: 0;
 }
+
 
 
 /* END HERO */
@@ -243,15 +262,36 @@ section#ordering{
 textarea{ resize: none;}
 
 
-button#bestill-btn {
-    border: 0;
+a#bestill-btn {
+    /* border: 1px solid gray; */
     border-radius: 6px;
-    background: var(--accent-color);
+    background: white;
+    max-width: 200px;
+    user-select: none;
+    cursor:pointer;
+    text-decoration: none;
+    /* color: whitesmoke; */
+    color: var(--accent-color);
 }
-/* button#bestill-btn:hover{
-    border-radius: 10px;
-} */
 
+a#bestill-btn:visited{
+    color: var(--highlight-color);
+}
+
+
+.diverse-info{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    border-radius: var(--level2);
+    padding: var(--level2);
+    /* width: fit-content; */
+    /* width: 50%; */
+}
+
+.diverse-info ul{
+    /* align-self: center; */
+}
 /* FEEDBACK */
 
 
@@ -329,17 +369,21 @@ section#feedback-list article > img{
 
 section#gallery{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex:1;
 }
 
+.gallery-item{
+    cursor: grab;
+}
 .gallery-grid{
     display: flex;
     height: 100%;
-    /* flex-wrap:wrap; */
     gap: 20px;
-    /* justify-content: center; */
     margin: 20px;
     overflow-x: scroll;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .gallery-grid img{
@@ -353,6 +397,7 @@ footer{
     flex-direction: row;
     background-color: var(--accent-color);
     padding: var(--level1);
+
 }
 
 footer .contact{
@@ -386,6 +431,13 @@ footer .icon-row{
         padding: var(--level2) 0;
     }
 
+
+    
+    .diverse-info{
+        width: fit-content;
+    }
+
+
     .banner p{
         text-align: center;
         width: 100%;
@@ -393,13 +445,6 @@ footer .icon-row{
         padding: 20px;
 
     }
-    main{
-        width: 100%;
-    }
-    body{
-        background-color: var(--highlight-color);
-    }
-
 
     footer .icon-row{
         justify-content: flex-end;
@@ -413,6 +458,10 @@ footer .icon-row{
         margin: 0 auto;
         max-width: 400px;
         /* padding: 300px; */
+    }
+
+    section#gallery{
+        height: 100vh;
     }
 }
 

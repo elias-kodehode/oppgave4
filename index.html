@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./app.js"></script>
+    <script src="./src/app.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <header id="header">
+        <h1>CRAFTSVILLA</h1>
+        <nav id="nav-bar">
+        </nav>
+    </header>
+    <div class="container">
 
-    <div class="column">
-        <header id="header">
-            <h1>CRAFTSVILLA</h1>
-            <nav id="nav-bar">
-                <!-- <a href="index">Hjem</a>
-                <a href="ordering">Bestilling</a>
-                <a href="#galleri">Galleri</a>
-                <a href="#feedback">Tilbakemelding</a>   -->
-            </nav>
-        </header>
     
         <main>
             <section id="hero" class="column">
@@ -32,10 +28,6 @@
                     <p>Hos CRAFTSVILLA bringer vi mennesker sammen gjennom kreativitet. Enten det er foreldre som knytter bånd med barn, venner som utforsker nye hobbyer eller kolleger som finner avslapning etter jobb – vi tilbyr gledelige, guidede kunstopplevelser for alle.</p>
                 </div>
 
-                <div class="text-slide p2" id="text-slide">
-                    <p>Ingen tidligere erfaring nødvendig</p>
-                </div>
-
                 <div class="information" id="information">
                     <div class="info-card">
                         <h2>Mosaikk Kunst</h2>
@@ -44,19 +36,32 @@
                         <button>400kr</button>
                     </div>
                     <div class="info-card">
-                        <h2>Mosaikk Kunst</h2>
-                        <img src="./images/mosaikk.png">
-                        <p>Sett inkluderer: Ramme, A4 størrelse treplate, små fargede steiner, gummi.</p>
-                        <button>400kr</button>
+                        <h2>Akvarellmaling</h2>
+                        <img src="./images/akvarell.png">
+                        <p>Sett inkluderer: Ramme, akvarellpapir med designmal, akvarellfarger, pensler.</p>
+                        <button>200kr</button>
                     </div>
                     <div class="info-card">
-                        <h2>Mosaikk Kunst</h2>
-                        <img src="./images/mosaikk.png">
-                        <p>Sett inkluderer: Ramme, A4 størrelse treplate, små fargede steiner, gummi.</p>
-                        <button>400kr</button>
+                        <h2>Lerretsmaling </h2>
+                        <img src="./images/Lerretsmaling.png">
+                        <p>Sett inkluderer: Ramme, akrylpapir med designmal, akrylfarger, pensler.</p>
+                        <button>300kr</button>
                     </div> 
                 </div>
-                <button id="bestill-btn" class="p2">Bestill versktedet ditt</button>
+
+
+
+                <div class="diverse-info">
+                    <ul>
+                        <li>Ingen tidligere erfaring nødvendig</li>
+                        <li>Alt materiale inkludert</li>
+                        <li>For alle aldre</li>
+                        <li>Slapp av og lad opp batteriene</li>
+                    </ul>
+                    <br>
+                    <a href="/ordering" id="bestill-btn" class="p1">Bestill versktedet ditt</a>
+                </div>
+
             </section>
         </main>
 

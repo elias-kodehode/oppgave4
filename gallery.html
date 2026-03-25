@@ -4,51 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestilling</title>
-    <script src="./app.js"></script>
+    <script src="./src/app.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/gallery.css">
 </head>
+
 <body onload="galleri.setup()">
 
-    <div class="image-popout" id="image-popout" hidden>
-        <div class="header-row">
+
+    <div class="gallery-modal" id="gallery-modal" onclick="galleri.close()" hidden>
+        <div class="modal-header">
             <h3 id="gallery-item-header">Bilde</h3>
-            <button onclick="galleri.closeModal(this)">X</button>
+            <button onclick="galleri.close()">X</button>
         </div>
-        <img>
-        <p class="beskrivelse">
-        </p>
+        <div class="modal-body">
+            <img alt="modal image">
+            <p class="beskrivelse"></p>
+        </div>
     </div>
+
+    <header id="header" >
+        <h1>CRAFTSVILLA</h1>
+        <nav id="nav-bar">
+
+        </nav>
+    </header>
+    <div class="container">
+
     
-    <div class="column grow viewport-h">
-        <header id="header" >
-            <h1>CRAFTSVILLA</h1>
-            <nav id="nav-bar">
-
-            </nav>
-        </header>
-
         <main>
             <section id="gallery" class="m3">
                 <h2>Galleri</h2>
                 <div class="gallery-grid" id="image-holder">
 
                     <div class="gallery-item">
+                        <!-- Hidden by default, used to fill in the gallery popout modal -->
                         <div class="item-info" hidden>
-                            <h3>Tittel</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum tenetur nam. Illo modi commodi nihil ab ratione esse vel doloremque voluptate officiis iusto consectetur voluptas repellendus voluptates provident mollitia, sunt neque? Quod cum odit pariatur architecto earum sit voluptate eveniet iste atque aspernatur, laborum saepe dignissimos sint, autem, aut quasi vel libero inventore minima debitis reiciendis. Reiciendis blanditiis dolor assumenda, maiores officiis ipsa porro deleniti magnam possimus veniam, qui voluptatum consequuntur impedit doloremque, aspernatur adipisci dolorem quam corporis nulla similique? Quam dolorum soluta explicabo nostrum! Quos laborum nobis temporibus consequuntur, perferendis odio! Nobis in eos dolor impedit, minima voluptatum.
-                            </p>
+                            <h3>Mosaikk Kunst</h3>
+                            <!-- <p>Mosaikk kunst</p> -->
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis sed inventore placeat provident nam, autem ipsa voluptatem aliquam numquam possimus tempora, voluptas consequatur unde repellat fugit totam, eum assumenda fuga!</p>
                         </div>
-                        <img src="./images/mosaikk.png" alt="image" onclick="galleri.openImage(this)">
+                        <img src="./images/mosaikk.png" alt="Mosaikk Kunst" onclick="galleri.openImage(this)">
 
                     </div>
-<!-- 
-                    
-                    <img src="./images/mosaikk.png" alt="image" onclick="galleri.openImage(this)">
-                    <img src="./images/mosaikk.png">
-                    <img src="./images/mosaikk.png">
-                    <img src="./images/mosaikk.png">
-                    <img src="./images/mosaikk.png"> -->
+
+                    <div class="gallery-item">
+                        <!-- Hidden by default, used to fill in the gallery popout modal -->
+                        <div class="item-info" hidden>
+                            <h3>Akvarellmaling</h3>
+                            <p>Akvarellmaling</p>
+                        </div>
+                        <img src="./images/akvarell.png" alt="Akvarellmaling" onclick="galleri.openImage(this)">
+
+                    </div>
+
+                    <div class="gallery-item">
+                        <!-- Hidden by default, used to fill in the gallery popout modal -->
+                        <div class="item-info" hidden>
+                            <h3>Lerretsmaling</h3>
+                            <p>Lerretsmaling</p>
+                        </div>
+                        <img src="./images/Lerretsmaling.png" alt="Lerretsmaling" onclick="galleri.openImage(this)">
+
+                    </div>
+
                 </div>
             </section>
         </main>
@@ -77,5 +96,7 @@
             </a>
         </div>
     </footer>
+
+
 </body>
 </html>
