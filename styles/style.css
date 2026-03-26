@@ -117,10 +117,9 @@ section#hero{
 
 /* give all children margin */
 section#hero > *{
-    margin: var(--level2);
+    /* margin: var(--level2); */
 
 }
-
 
     /*  BANNER */
 .banner{
@@ -128,12 +127,12 @@ section#hero > *{
     border-radius: var(--level2);
     text-align: center;
     padding: var(--level2);
+    margin: 0;
 }
 
 /* OVerride margins set in hero >* selector */
 section#hero .banner{
-    margin: var(--level2) 0;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 0;
 }
 
@@ -144,19 +143,9 @@ section#hero .banner{
     height: 200px;
 }
 
-/*ANIMATED TEXT  */
-.text-slide{
-    background-color: var(--secondary-color);
-    border-radius: var(--level2);
-    text-align: center;
-}
-
- .text-slide p{
-    overflow: hidden;
-}
 
 
-    /* Information */
+/* Information */
 .information{
     display: flex;
     flex-direction: column;

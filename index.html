@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./src/app.js"></script>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/newstyle.css">
 </head>
 <body>
     <header id="header">
@@ -13,82 +13,76 @@
         <nav id="nav-bar">
         </nav>
     </header>
-    <div class="container">
 
-    
-        <main>
-            <section id="hero" class="column">
-                <div class="banner">
-                    <figure>
-                        <figcaption>
-                            <h2>Slipp løs kreativiteten din. Koble til. Slapp av.</h2>
-                        </figcaption>
-                        <img  src="./images/banner.png">
-                    </figure>
+    <main class="container">
+        <section id="hero">
+            <div class="banner">
+                <img  src="./images/banner.png">
+                <div class="padding popout-border">
+                    <h2>Slipp løs kreativiteten din. Koble til. Slapp av.</h2>
                     <p>Hos CRAFTSVILLA bringer vi mennesker sammen gjennom kreativitet. Enten det er foreldre som knytter bånd med barn, venner som utforsker nye hobbyer eller kolleger som finner avslapning etter jobb – vi tilbyr gledelige, guidede kunstopplevelser for alle.</p>
                 </div>
-
-                <div class="information" id="information">
-                    <div class="info-card">
-                        <h2>Mosaikk Kunst</h2>
-                        <img src="./images/mosaikk.png">
-                        <p>Sett inkluderer: Ramme, A4 størrelse treplate, små fargede steiner, gummi.</p>
-                        <button>400kr</button>
-                    </div>
-                    <div class="info-card">
-                        <h2>Akvarellmaling</h2>
-                        <img src="./images/akvarell.png">
-                        <p>Sett inkluderer: Ramme, akvarellpapir med designmal, akvarellfarger, pensler.</p>
-                        <button>200kr</button>
-                    </div>
-                    <div class="info-card">
-                        <h2>Lerretsmaling </h2>
-                        <img src="./images/Lerretsmaling.png">
-                        <p>Sett inkluderer: Ramme, akrylpapir med designmal, akrylfarger, pensler.</p>
-                        <button>300kr</button>
-                    </div> 
-                </div>
-
-
-
-                <div class="diverse-info">
-                    <ul>
-                        <li>Ingen tidligere erfaring nødvendig</li>
-                        <li>Alt materiale inkludert</li>
-                        <li>For alle aldre</li>
-                        <li>Slapp av og lad opp batteriene</li>
-                    </ul>
-                    <br>
-                    <a href="/ordering" id="bestill-btn" class="p1">Bestill versktedet ditt</a>
-                </div>
-
-            </section>
-        </main>
-
-
-        <footer>
-            <div class="contact">
-                <div class="col m3">
-                    <address>
-                        Gateveien 64<br>
-                        6065 Ulsteinvik<br>
-                        +47 12 34 56 78
-                    </address>
-                </div>
+               
             </div>
-            <div class="icon-row">
-                <a href="#">
-                    <img src="./images/icons/mail.png" alt="Email">
-                </a>
-                <a href="#">
-                    <img src="./images/icons/facebook.png" alt="facebook">
-                </a>
-                <a href="#">
-                    <img src="./images/icons/twitter.png" alt="twitter">
-                </a>
-            </div>
-        </footer>
-    </div>
+        </section>
 
+        <section id="content">
+            <div class="information" id="information">
+                <div class="info-card">
+                    <h2>Mosaikk Kunst</h2>
+                    <img src="./images/mosaikk.png">
+                    <p>Sett inkluderer: Ramme, A4 størrelse treplate, små fargede steiner, gummi.</p>
+                    <button>400kr</button>
+                </div>
+                <div class="info-card">
+                    <h2>Akvarellmaling</h2>
+                    <img src="./images/akvarell.png">
+                    <p>Sett inkluderer: Ramme, akvarellpapir med designmal, akvarellfarger, pensler.</p>
+                    <button>200kr</button>
+                </div>
+                <div class="info-card">
+                    <h2>Lerretsmaling </h2>
+                    <img src="./images/Lerretsmaling.png">
+                    <p>Sett inkluderer: Ramme, akrylpapir med designmal, akrylfarger, pensler.</p>
+                    <button>300kr</button>
+                </div> 
+            </div>
+
+
+
+            <div class="diverse-info padding popout-border">
+                <ul>
+                    <li>Ingen tidligere erfaring nødvendig</li>
+                    <li>Alt materiale inkludert</li>
+                    <li>For alle aldre</li>
+                    <li>Slapp av og lad opp batteriene</li>
+                </ul>
+                <br>
+                <a href="/ordering" id="bestill-btn" class="p1">Bestill versktedet ditt</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer clas>
+        <div class="contact ">
+            <address>
+                Gateveien 64<br>
+                6065 Ulsteinvik<br>
+                +47 12 34 56 78
+            </address>
+        </div>
+        <div class="icon-row">
+            <a class="footer-button" href="#">
+                <img  src="./images/icons/mail.png" alt="Email">
+            </a>
+            <a href="#">
+                <img class="footer-button" src="./images/icons/facebook.png" alt="facebook">
+            </a>
+            <a href="#">
+                <img class="footer-button" src="./images/icons/twitter.png" alt="twitter">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
