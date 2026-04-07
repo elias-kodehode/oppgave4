@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestilling</title>
     <script src="./src/app.js"></script>
-    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/gallery.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body onload="galleri.setup()">
@@ -29,74 +29,86 @@
 
         </nav>
     </header>
-    <div class="container">
-
     
-        <main>
-            <section id="gallery" class="m3">
-                <h2>Galleri</h2>
-                <div class="gallery-grid" id="image-holder">
-
-                    <div class="gallery-item">
-                        <!-- Hidden by default, used to fill in the gallery popout modal -->
-                        <div class="item-info" hidden>
-                            <h3>Mosaikk Kunst</h3>
-                            <!-- <p>Mosaikk kunst</p> -->
-                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis sed inventore placeat provident nam, autem ipsa voluptatem aliquam numquam possimus tempora, voluptas consequatur unde repellat fugit totam, eum assumenda fuga!</p>
-                        </div>
-                        <img src="./images/mosaikk.png" alt="Mosaikk Kunst" onclick="galleri.openImage(this)">
-
+    <main class="container">
+        <section id="gallery">
+            <h2>Galleri</h2>
+            <div class="gallery-container" id="image-holder">
+                <div class="gallery-item">
+                    <!-- Hidden by default, used to fill in the gallery popout modal -->
+                    <div class="item-info" hidden>
+                        <h3>Mosaikk Kunst</h3>
+                        <!-- <p>Mosaikk kunst</p> -->
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis sed inventore placeat provident nam, autem ipsa voluptatem aliquam numquam possimus tempora, voluptas consequatur unde repellat fugit totam, eum assumenda fuga!</p>
                     </div>
-
-                    <div class="gallery-item">
-                        <!-- Hidden by default, used to fill in the gallery popout modal -->
-                        <div class="item-info" hidden>
-                            <h3>Akvarellmaling</h3>
-                            <p>Akvarellmaling</p>
-                        </div>
-                        <img src="./images/akvarell.png" alt="Akvarellmaling" onclick="galleri.openImage(this)">
-
-                    </div>
-
-                    <div class="gallery-item">
-                        <!-- Hidden by default, used to fill in the gallery popout modal -->
-                        <div class="item-info" hidden>
-                            <h3>Lerretsmaling</h3>
-                            <p>Lerretsmaling</p>
-                        </div>
-                        <img src="./images/Lerretsmaling.png" alt="Lerretsmaling" onclick="galleri.openImage(this)">
-
-                    </div>
+                    <img src="./images/mosaikk.png" alt="Mosaikk Kunst" onclick="galleri.openImage(this)">
 
                 </div>
-            </section>
-        </main>
-    </div>
+
+                <div class="gallery-item">
+                    <!-- Hidden by default, used to fill in the gallery popout modal -->
+                    <div class="item-info" hidden>
+                        <h3>Akvarellmaling</h3>
+                        <p>Akvarellmaling</p>
+                    </div>
+                    <img src="./images/akvarell.png" alt="Akvarellmaling" onclick="galleri.openImage(this)">
+
+                </div>
+                <div class="gallery-item">
+                    <!-- Hidden by default, used to fill in the gallery popout modal -->
+                    <div class="item-info" hidden>
+                        <h3>Akvarellmaling</h3>
+                        <p>Akvarellmaling</p>
+                    </div>
+                    <img src="./images/akvarell.png" alt="Akvarellmaling" onclick="galleri.openImage(this)">
+
+                </div>                <div class="gallery-item">
+                    <!-- Hidden by default, used to fill in the gallery popout modal -->
+                    <div class="item-info" hidden>
+                        <h3>Akvarellmaling</h3>
+                        <p>Akvarellmaling</p>
+                    </div>
+                    <img src="./images/akvarell.png" alt="Akvarellmaling" onclick="galleri.openImage(this)">
+
+                </div>
+                <div class="gallery-item">
+                    <!-- Hidden by default, used to fill in the gallery popout modal -->
+                    <div class="item-info" hidden>
+                        <h3>Lerretsmaling</h3>
+                        <p>Lerretsmaling</p>
+                    </div>
+                    <img src="./images/Lerretsmaling.png" alt="Lerretsmaling" onclick="galleri.openImage(this)">
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
 
     <footer>
-        <div class="contact">
-            <div class="col m3">
-                <address>
-                    Gateveien 64<br>
-                    6065 Ulsteinvik<br>
-                    +47 12 34 56 78
-                </address>
-            </div>
-        </div>
+
+        <address>
+            <ul>
+                <li>Gateveien 64</li>
+                <li>6065 Ulsteinvik</li>
+                <li>+47 12 34 56 78</li>
+            </ul>
+        </address>
 
         <div class="icon-row">
             <a href="#">
-                <img src="./images/icons/mail.png" alt="Email">
+                <img src="./images/icons/facebook.svg" alt="" >
             </a>
             <a href="#">
-                <img src="./images/icons/facebook.png" alt="facebook">
+                <img src="./images/icons/twitter.svg" alt="" >
             </a>
             <a href="#">
-                <img src="./images/icons/twitter.png" alt="twitter">
+                <img src="./images/icons/email.svg" alt="">
             </a>
         </div>
-    </footer>
 
+    </footer>
 
 </body>
 </html>

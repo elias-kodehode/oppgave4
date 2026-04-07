@@ -1,3 +1,27 @@
+section#gallery{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+section#gallery h2{
+    text-align: center;
+}
+
+.gallery-container{
+    display: flex;
+    gap: 8px;
+    overflow-x: scroll;
+}
+.gallery-container img{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.gallery-item{
+    cursor: grab;
+}
+
 .gallery-modal{
     display: flex;
     flex-direction: column;

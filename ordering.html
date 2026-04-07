@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestilling</title>
     <script src="./src/app.js"></script>
-    <link rel="stylesheet" href="./styles/newstyle.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- <link rel="stylesheet" href="./styles/ordering.css"> -->
 </head>
 <body>
 
@@ -15,93 +16,66 @@
     </nav>
 </header>
 
-<div class="container">
 
-    <main>
-        <section id="ordering" class="p1 m1">
-            <div class="ordering-container p1">
+    <main class="container">
+        <section id="ordering" class="info-card">
                 <h2>Workshops i nærheten</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d476632.8917587868!2d5.531032012206915!3d62.182964541840484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBurger%20King!5e0!3m2!1sen!2sno!4v1773916485644!5m2!1sen!2sno"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d476632.8917587868!2d5.531032012206915!3d62.182964541840484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBurger%20King!5e0!3m2!1sen!2sno!4v1773916485644!5m2!1sen!2sno"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 <form>
-                    <select id="valg-omeråde">
-                        <option value="ålesund">Ålesund</option>
-                        <option value="Ulstein">Ulstein</option>
-                        <option value="Volda">Volda</option>
-                        <option value="Ørsta">Ørsta</option>
-                    </select>
-
-                    <select id="valg-workshop">
-                        <option value="mosaikk">Mosaikk (400kr)</option>
-                        <option value="Akvarellmaling">Akvarellmaling(200kr)</option>
-                        <option value="Lerretsmaling">Lerretsmaling(300kr)</option>
-                    </select>
-
-
-                    <div class="order-info row flex-1">
-                        <div class="user-info column mg-1 flex-2">
-                            <div class="user-info-input">
-                                <label for="navn">Navn:</label>
-                                <input id="navn" type="text" placeholder="Navn">
-                            </div>
-
-                            <div class="user-info-input">
-                                <label for="navn">E-Mail:</label>
-                                <input id="email" type="email" placeholder="E-Mail" autocomplete="email">
-                            </div>
-
-                            <div class="user-info-input">
-                                <label for="navn">Mobil:</label>              
-                                <input id="mobil" type="text" placeholder="Mobil">
-                            </div>
-
-                            <div class="user-info-input">
-                                <label for="">Deltakere:</label>
-                                <input type="number" value="1" min="1" max="20" name="" id="personer">
-                            </div>
-                        </div>
-                        
-                        <div class="column mg-1 flex-1">
-                            <label for="date">Dato</label>
-                            <input type="datetime-local" name="date" id="date">
-                        </div>
+                    <div class="input-group">
+                        <label>Lokale</label>
+                        <select id="valg-omeråde">
+                            <option value="ålesund">Ålesund</option>
+                            <option value="Ulstein">Ulstein</option>
+                            <option value="Volda">Volda</option>
+                            <option value="Ørsta">Ørsta</option>
+                        </select>
                     </div>
 
-                    <div class="column">
+
+                    <div class="input-group">
+                        <select id="valg-workshop">
+                            <option value="mosaikk">Mosaikk (400kr)</option>
+                            <option value="Akvarellmaling">Akvarellmaling(200kr)</option>
+                            <option value="Lerretsmaling">Lerretsmaling(300kr)</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="navn">Navn:</label>
+                        <input id="navn" type="text" placeholder="Navn">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="navn">E-Mail:</label>
+                        <input id="email" type="email" placeholder="E-Mail" autocomplete="email">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="navn">Mobil:</label>              
+                        <input id="mobil" type="text" placeholder="Mobil">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Deltakere:</label>
+                        <input type="number" value="1" min="1" max="20" name="" id="personer">
+                    </div>
+                    <div class="input-group">
+                        <label for="date">Dato</label>
+                        <input type="datetime-local" name="date" id="date">
+                    </div>
+
+                    <div class="input-group">
                         <label for="ønsker">Spesielle Ønsker:</label>
                         <textarea name="ønsker" id="ønsker" rows="5"></textarea>
                     </div>
 
                     <button type="submit">Bestill</button>
                 </form>
-            </div>
         </section>
     </main>
     
-
-    <footer>
-        <div class="contact">
-            <div class="col m3">
-                <address>
-                    Gateveien 64<br>
-                    6065 Ulsteinvik<br>
-                    +47 12 34 56 78
-                </address>
-            </div>
-        </div>
-
-        <div class="icon-row">
-            <a href="#">
-                <img src="./images/icons/mail.png" alt="Email">
-            </a>
-            <a href="#">
-                <img src="./images/icons/facebook.png" alt="facebook">
-            </a>
-            <a href="#">
-                <img src="./images/icons/twitter.png" alt="twitter">
-            </a>
-        </div>
-    </footer>
-</div>
 
 </body>
 </html>

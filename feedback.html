@@ -9,162 +9,117 @@
 </head>
 <body>
 
-<div class="column">
     <header id="header" >
         <h1>CRAFTSVILLA</h1>
         <nav id="nav-bar">
-
         </nav>
     </header>
 
-    <main>
-        <section id="feedback" class="p1 m1">
-            <h2>Vi vil gjerne høre fra deg!</h2>
-            <h3>Tilbakemeldingene dine hjelper oss med å gjøre workshopene våre bedre for alle. Del gjerne opplevelsen din med oss!</h3>
+    <main class="container">
+        <section id="feedback">
 
-            <form id="feedback-form" class="col">
+            <div class="info-card" id="feedback-form">
+                <h2>Vi vil gjerne høre fra deg!</h2>
 
-                <div class="column">
-                    <label>Lokale</label>
-                    <select id="valg-omeråde">
-                        <option value="ålesund">Ålesund</option>
-                        <option value="Ulstein">Ulstein</option>
-                        <option value="Volda">Volda</option>
-                        <option value="Ørsta">Ørsta</option>
-                    </select>
-                </div>
+                <form action="">
+                    <h3>Tilbakemeldingene dine hjelper oss med å gjøre workshopene våre bedre for alle. Del gjerne opplevelsen din med oss!</h3>
 
+                    <div class="input-group">
+                        <label>Lokale</label>
+                        <select id="valg-omeråde">
+                            <option value="ålesund">Ålesund</option>
+                            <option value="Ulstein">Ulstein</option>
+                            <option value="Volda">Volda</option>
+                            <option value="Ørsta">Ørsta</option>
+                        </select>
+                    </div>
 
-                <div class="column">
-                    <label>Workshop</label>
-                    <select id="valg-workshop">
-                        <option value="mosaikk">Mosaikk</option>
-                        <option value="Akvarellmaling">Akvarellmaling</option>
-                        <option value="Lerretsmaling">Lerretsmaling</option>
-                        <option value="Lerretsmaling">Annet/Flere</option>
-                    </select>
-                </div>
+                    <div class="input-group">
+                        <label>Workshop</label>
+                        <select id="valg-workshop">
+                            <option value="mosaikk">Mosaikk</option>
+                            <option value="Akvarellmaling">Akvarellmaling</option>
+                            <option value="Lerretsmaling">Lerretsmaling</option>
+                            <option value="Lerretsmaling">Annet/Flere</option>
+                        </select>
+                    </div>
+    
+    
+                    <div class="input-group">
+                        <label for="navn">Navn:</label>
+                        <input id="navn" type="text" placeholder="Navn">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="navn">E-Mail:</label>
+                        <input id="email" type="email" placeholder="E-Mail" autocomplete="email">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="ønsker">Hva likte du best?</label>
+                        <textarea name="ønsker" id="ønsker" rows="5"></textarea>
+                    </div>
+    
+    
+                    <div class="input-group">
+                        <label for="ønsker">Hvordan kan vi forbedre opplevelsen din?</label>
+                        <textarea name="ønsker" id="ønsker" rows="5"></textarea>
+                    </div>
+    
+                    <div class="input-group">
+                        <label>Vil du anbefale CRAFTSVILLA til andre?</label>
+                        <select name="" id="">
+                            <option>Ja</option>
+                            <option>Nei</option>
+                            <option>Kanskje</option>
+                        </select>
+                    </div>
 
+                    <div class="input-group">
+                        <label for="">
+                            Jeg gir CRAFTSVILLA tillatelse til å dele tilbakemeldingene mine på nettstedet deres eller sosiale medier.
+                            <input type="checkbox" name="" id="">
+                        </label>
+                    </div>
+                </form>
 
-                <div class="column">
-                    <label for="navn">Navn:</label>
-                    <input id="navn" type="text" placeholder="Navn">
-                </div>
+            </div>
 
-                <div class="column">
-                    <label for="navn">E-Mail:</label>
-                    <input id="email" type="email" placeholder="E-Mail" autocomplete="email">
-                </div>
+            <div class="info-card" id="feedback-list">
+                <h2>Tilbakemeldinger</h2>
 
-                <div class="column">
-                    <label for="ønsker">Hva likte du best?</label>
-                    <textarea name="ønsker" id="ønsker" rows="5"></textarea>
-                </div>
-
-
-                <div class="column">
-                    <label for="ønsker">Hvordan kan vi forbedre opplevelsen din?</label>
-                    <textarea name="ønsker" id="ønsker" rows="5"></textarea>
-                </div>
-
-                <div class="column">
-                    <label>Vil du anbefale CRAFTSVILLA til andre?</label>
-                    <select name="" id="">
-                        <option>Ja</option>
-                        <option>Nei</option>
-                        <option>Kanskje</option>
-                    </select>
-                </div>
-
-                <div class="column ">
-                    <label>Jeg gir CRAFTSVILLA tillatelse til å dele tilbakemeldingene mine på nettstedet deres eller sosiale medier.</label>
-                    <input type="checkbox" name="" id="" value="">
-                </div>
-
-                <div class="column">
-                    <label for="">Last Opp bilde</label>
-                    <input type="file" name="" id="">
-                </div>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-
-
-        <section id="feedback-list" class="column">
-            <h2>Tilbakemeldinger</h2>
-
-            <article class="">
-                <div class="profil">
-                    <img src="./images/mosaikk.png">
-                    <h3>Ola</h3>
-                </div>
-                <br>
-                <p>
-                    Veldig grei gjeng!
-                </p>
-            </article>
-            <article class="">
-                <div class="profil">
-                    <img src="./images/mosaikk.png">
-                    <h3>Ola</h3>
-                </div>
-                <br>
-                <p>
-                    10/10
-                </p>
-            </article>
-
-            <article class="">
-                <div class="profil">
-                    <img src="./images/mosaikk.png">
-                    <h3>Ola</h3>
-                </div>
-                <br>
-                <p>
-                    fantastisk!
-                </p>
-            </article>
-
-            <article class="">
-                <div class="profil">
-                    <img src="./images/mosaikk.png">
-                    <h3>Ola</h3>
-                </div>
-                <br>
-                <p>
-                    oi
-                </p>
-            </article>
-
-
+                <ul>
+                    <li class="feedback-card ">
+                        <h3>Karl</h3>
+                        <!-- <img src="./images/Lerretsmaling.png"> -->
+                        <p>Veldig bra service!! 10/10</p>
+                    </li>
+                    <li class="feedback-card">
+                        <h3>Username</h3>
+                        <!-- <img src="./images/Lerretsmaling.png"> -->
+                        <p>Feedback</p>
+                    </li>
+                    <li class="feedback-card">
+                        <h3>Username</h3>
+                        <!-- <img src="./images/Lerretsmaling.png"> -->
+                        <p>Feedback</p>
+                    </li>
+                    <li class="feedback-card">
+                        <h3>Username</h3>
+                        <!-- <img src="./images/Lerretsmaling.png"> -->
+                        <p>Feedback</p>
+                    </li>
+                    <li class="feedback-card">
+                        <h3>Username</h3>
+                        <!-- <img src="./images/Lerretsmaling.png"> -->
+                        <p>Feedback</p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     
-
-    <footer>
-        <div class="contact">
-            <div class="col m3">
-                <address>
-                    Gateveien 64<br>
-                    6065 Ulsteinvik<br>
-                    +47 12 34 56 78
-                </address>
-            </div>
-        </div>
-
-        <div class="icon-row">
-            <a href="#">
-                <img src="./images/icons/mail.png" alt="Email">
-            </a>
-            <a href="#">
-                <img src="./images/icons/facebook.png" alt="facebook">
-            </a>
-            <a href="#">
-                <img src="./images/icons/twitter.png" alt="twitter">
-            </a>
-        </div>
-    </footer>
-</div>
+    <footer>hello</footer>
 
 </body>
 </html>

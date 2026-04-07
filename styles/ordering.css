@@ -1,0 +1,27 @@
+section#ordering{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#ordering > * {
+    padding: 8px;
+    gap: 8px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+section#ordering h2{
+    text-align: center;
+}
+
+input,select, textarea, button{
+    background-color: transparent;
+}
+
+form select > option{
+    color: black;
+}
